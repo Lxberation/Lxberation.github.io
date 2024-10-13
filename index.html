@@ -1,21 +1,3 @@
-<!--
-88                        88
-88                        88                                                 ,d     88
-88                        88                                                 88
-88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,
-88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a
-88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88
-88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88
-88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88
-================================================================================================================
-Programmer: Daniel Rae Tiangco
-Student ID: 0804165
-Project: Assignment 1: Personal Website
-Date: 10/0/2024
-Description: Personal Online Portfolio
-================================================================================================================
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,30 +127,28 @@ Description: Personal Online Portfolio
                 </video>
             </div>
             <div class="contact-boxes">
-            <form action="submit_form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
-            <form action="submit_form.php" method="POST">
-                    <label for="name">Organization:</label>
-            <input type="text" id="name" name="name" placeholder="Your Organization" required><br><br>
-            <label for="reason">Reason for Contact:</label>
-            <select id="reason" name="reason" required>
-                <option value="" disabled selected>Select a reason</option>
-                <option value="job">Job Inquiry</option>
-                <option value="project">Project Collaboration</option>
-                <option value="other">Other</option>
-            </select><br><br>
-            <fieldset>
-                <legend>What services are you interested in?</legend>
-                <label><input type="checkbox" name="services[]" value="software-development"> Software Development</label><br>
-                <label><input type="checkbox" name="services[]" value="web-development"> Web Development</label><br>
-                <label><input type="checkbox" name="services[]" value="consulting"> Consultation</label><br>
-                <label><input type="checkbox" name="services[]" value="other"> Other</label><br>
-            </fieldset><br>
-        </div>
-        <a href="#top">
-            <button type="button">Submit</button>
-        </a>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+                    <label for="organization">Organization:</label>
+                    <input type="text" id="organization" name="organization" placeholder="Your Organization" required><br><br>
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Select a reason</option>
+                        <option value="job">Job Inquiry</option>
+                        <option value="project">Project Collaboration</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                    <fieldset>
+                        <legend>What services are you interested in?</legend>
+                        <label><input type="checkbox" name="services[]" value="software-development"> Software Development</label><br>
+                        <label><input type="checkbox" name="services[]" value="web-development"> Web Development</label><br>
+                        <label><input type="checkbox" name="services[]" value="consulting"> Consultation</label><br>
+                        <label><input type="checkbox" name="services[]" value="other"> Other</label><br>
+                    </fieldset><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
