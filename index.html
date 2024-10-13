@@ -28,6 +28,7 @@ Description: Personal Online Portfolio
     <title>Drae</title>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <ul>
             <li class="logo"><img src="img/logo.png" alt="Personal Logo" /></li>
@@ -37,7 +38,10 @@ Description: Personal Online Portfolio
             <li><a href="index.html#contact-me">Contacts</a></li>
         </ul>
     </nav>
+
+    <!-- Main Content -->
     <main>
+        <!-- Home Section -->
         <div id="home" class="home-section">
             <h2>Home</h2>
             <div class="home-info">
@@ -59,9 +63,12 @@ Description: Personal Online Portfolio
                 </div>
             </div>
         </div>
+
+        <!-- Projects Section -->
         <div id="projects" class="projects-section">
             <h2>Projects</h2>
             <div class="tab-container">
+                <!-- Project: Trent Computer Science Organization -->
                 <div class="tab-tdcso">
                     <img src="img/TDCSO.jpg" alt="">
                     <div class="tab-info">
@@ -69,6 +76,7 @@ Description: Personal Online Portfolio
                         <p>I am one of the founders of the Trent Computer Science Organization, dedicated to fostering collaboration and innovation among students in the field of computer science.</p>
                     </div>
                 </div>
+                <!-- Project: CutsByDrae Business Page -->
                 <div class="tab-barber">
                     <img src="img/barber.jpg" alt="">
                     <div class="tab-info">
@@ -78,51 +86,61 @@ Description: Personal Online Portfolio
                 </div>
             </div>
         </div>
+
+        <!-- Skills Section -->
         <div id="skills" class="skills-section">
             <h2>Skills</h2>
             <ul class="skills-list">
+                <!-- Skill: Java -->
                 <li class="java-skill">
                     <span>Java</span>
                     <div class="skill-bar">
                         <div class="skill-fill java"></div>
                     </div>
                 </li>
+                <!-- Skill: Python -->
                 <li class="python-skill">
                     <span>Python</span>
                     <div class="skill-bar">
                         <div class="skill-fill python"></div>
                     </div>
                 </li>
+                <!-- Skill: C# -->
                 <li class="csharp-skill">
                     <span>C#</span>
                     <div class="skill-bar">
                         <div class="skill-fill csharp"></div>
                     </div>
                 </li>
+                <!-- Skill: Linux -->
                 <li class="linux-skill">
                     <span>Linux</span>
                     <div class="skill-bar">
                         <div class="skill-fill linux"></div>
                     </div>
                 </li>
+                <!-- Skill: HTML & CSS -->
                 <li class="htmlcss-skill">
                     <span>HTML & CSS</span>
                     <div class="skill-bar">
                         <div class="skill-fill htmlcss"></div>
                     </div>
                 </li>
+                <!-- Skill: SQL -->
                 <li class="sql-skill">
                     <span>SQL</span>
                     <div class="skill-bar">
                         <div class="skill-fill sql"></div>
                     </div>
                 </li>
+                <!-- Skill: JavaScript -->
                 <li class="javascript-skill">
                     <span>JavaScript</span>
                     <div class="skill-bar">
                         <div class="skill-fill javascript"></div>
                     </div>
                 </li>
+                <!-- Skill: C/C++ -->
                 <li class="candcplusplus-skill">
                     <span>C/C++</span>
                     <div class="skill-bar">
@@ -131,10 +149,12 @@ Description: Personal Online Portfolio
                 </li>
             </ul>
         </div>
+
+        <!-- Contact Me Section -->
         <div id="contact-me" class="contact-me-section">
             <h2>Contact Me</h2>
             <div class="contact-icons">
-               <a href="mailto:danielraetiangco@trentu.ca"><img src="img/email.png" alt="Email"></a>
+                <a href="mailto:danielraetiangco@trentu.ca"><img src="img/email.png" alt="Email"></a>
                 <a href="https://www.linkedin.com/in/daniel-rae-t-234543220/"><img src="img/linkedin.png" alt="LinkedIn"></a>
                 <a href="https://github.com/Lxberation"><img src="img/github.png" alt="Github"></a>
             </div>
@@ -145,32 +165,35 @@ Description: Personal Online Portfolio
                 </video>
             </div>
             <div class="contact-boxes">
-            <form action="submit_form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
-            <form action="submit_form.php" method="POST">
-                    <label for="name">Organization:</label>
-            <input type="text" id="name" name="name" placeholder="Your Organization" required><br><br>
-            <label for="reason">Reason for Contact:</label>
-            <select id="reason" name="reason" required>
-                <option value="" disabled selected>Select a reason</option>
-                <option value="job">Job Inquiry</option>
-                <option value="project">Project Collaboration</option>
-                <option value="other">Other</option>
-            </select><br><br>
-            <fieldset>
-                <legend>What services are you interested in?</legend>
-                <label><input type="checkbox" name="services[]" value="software-development"> Software Development</label><br>
-                <label><input type="checkbox" name="services[]" value="web-development"> Web Development</label><br>
-                <label><input type="checkbox" name="services[]" value="consulting"> Consultation</label><br>
-                <label><input type="checkbox" name="services[]" value="other"> Other</label><br>
-            </fieldset><br>
-        </div>
-        <a href="#top">
-            <button type="button">Submit</button>
-        </a>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+                    
+                    <label for="organization">Organization:</label>
+                    <input type="text" id="organization" name="organization" placeholder="Your Organization" required><br><br>
+
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Select a reason</option>
+                        <option value="job">Job Inquiry</option>
+                        <option value="project">Project Collaboration</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+
+                    <fieldset>
+                        <legend>What services are you interested in?</legend>
+                        <label><input type="checkbox" name="services[]" value="software-development"> Software Development</label><br>
+                        <label><input type="checkbox" name="services[]" value="consultation"> Consultation</label><br>
+                        <label><input type="checkbox" name="services[]" value="training"> Training</label><br>
+                    </fieldset>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </main>
+
+    <!-- Footer -->
     <footer>
         <div id="Footer" class="footer-section">
             <p>©2024 Daniel Rae Tiangco</p>
