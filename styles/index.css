@@ -1,0 +1,318 @@
+body {
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(45deg,#4ddba7,#3e4ea9,#53cbc5,#101ddb);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: "Old Standard TT", serif;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
+    position: relative;
+}
+
+nav li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #FAF9F6;
+    transition: width 0.3s ease;
+    width: 100%;
+}
+
+.logo img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+nav {
+    border-bottom: 2px solid white;
+}
+
+.home-section {
+    color: white;
+    padding-left: 3rem;
+    padding-top: 0rem;
+}
+
+.home-section h2 {
+    text-align: center;
+    color: white;
+    padding-right: 3rem;
+    font-size: 3rem;
+}
+
+.home-info {
+    display: flex;
+    align-items: flex-start;
+}
+
+.home-info p {
+    font-size: 2rem;
+    margin-top: 0rem;
+}
+
+.home-description {
+    font-size: 1.5rem;
+}
+
+.audio {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.audio audio {
+    width: 85%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-img {
+    margin-right: 3.5rem;
+}
+
+.home-img img {
+    max-width: 30rem;
+    max-height: 30rem;
+    border-radius: 2rem;
+    margin-left: 4rem;
+    transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s;
+}
+
+.home-img:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem cyan;
+    border-radius: 3em;
+}
+
+.projects-section {
+    margin-bottom: 2rem;
+}
+
+.projects-section h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tab-tdcso {
+    width: 25%;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #72A9BC;
+    box-shadow: 0 0 0.5rem white;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.tab-tdcso img {
+    width: 11rem;
+    height: 12rem;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+}
+
+.tab-barber {
+    width: 25%;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #72A9BC;
+    box-shadow: 0 0 0.5rem white;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.tab-barber img {
+    width: 11rem;
+    height: 15rem;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+}
+
+.tab-info h3 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.tab-info p {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.tab-tdcso:hover {
+    transform: scale(1.1);
+}
+
+.tab-barber:hover {
+    transform: scale(1.1);
+}
+
+.skills-section h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.skill-bar {
+    position: relative;
+    height: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.skill-fill {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease;
+    background-color: white;
+}
+
+.java {
+    width: 95%;
+}
+
+.python {
+    width: 95%;
+}
+
+.csharp {
+    width: 95%;
+}
+
+.linux {
+    width: 85%;
+}
+
+.htmlcss {
+    width: 80%;
+}
+
+.sql {
+    width: 75%;
+}
+
+.javascript {
+    width: 60%;
+}
+
+.candcplusplus {
+    width: 60%;
+}
+
+.skills-section {
+    margin-bottom: 2rem;
+}
+
+.skills-list li {
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.skills-list li span {
+    display: block;
+    text-align: center;
+}
+
+.contact-me-section {
+    text-align: center;
+}
+
+.contact-me-section h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.contact-me-section contact-icons {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.contact-icons img {
+    max-width: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.contact-boxes {
+    color: white;
+    font-size: 1.25rem;
+}
+
+fieldset {
+    border: none;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.video-player {
+    width: 35%;
+    max-width: 50rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.footer-section p {
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 3rem;
+}

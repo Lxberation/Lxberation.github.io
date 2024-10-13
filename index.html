@@ -1,0 +1,180 @@
+<!--
+88                        88
+88                        88                                                 ,d     88
+88                        88                                                 88
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88
+================================================================================================================
+Programmer: Daniel Rae Tiangco
+Student ID: 0804165
+Project: Assignment 1: Personal Website
+Date: 10/0/2024
+Description: Personal Online Portfolio
+================================================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Drae</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo"><img src="img/logo.png" alt="Personal Logo" /></li>
+            <li><a href="index.html#home" class="active">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="home" class="home-section">
+            <h2>Home</h2>
+            <div class="home-info">
+                <p>Hi I'm Daniel Rae Tiangco,<br><br>
+                    <span class="home-description">I'm currently pursuing an honours degree in Computer Science, with great interest in both software and infrastructure engineering. This academic path has equipped me with a strong foundation in programming, systems design, and network infrastructure. Alongside my studies, I serve as an executive member of the Trent Durham Computer Science Organization, where I lead initiatives that foster collaboration, skill development, and networking among students in our field. I am actively seeking employment opportunities to apply my knowledge and skills in a practical setting, with a keen interest in roles that will allow me to contribute to innovative projects and further develop my expertise in software and infrastructure engineering.</span>
+                </p>
+                <div class="home-img">
+                    <img 
+                        src="img/me.jpg" 
+                        srcset="img/me.jpg 600w, img/me.jpg 1200w, img/me.jpg 1800w" 
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 30vw" 
+                        alt="An image of me">
+                    <div class="audio">
+                        <audio controls>
+                            <source src="/img/introduction.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="tab-container">
+                <div class="tab-tdcso">
+                    <img src="img/TDCSO.jpg" alt="">
+                    <div class="tab-info">
+                        <h3>Trent Computer Science <br> Organization</h3>
+                        <p>I am one of the founders of the Trent Computer Science Organization, dedicated to fostering collaboration and innovation among students in the field of computer science.</p>
+                    </div>
+                </div>
+                <div class="tab-barber">
+                    <img src="img/barber.jpg" alt="">
+                    <div class="tab-info">
+                        <h3>CutsByDrae Business Page</h3>
+                        <p>I designed a business website focused on networking, utilizing third-party software to create an engaging and functional platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li class="java-skill">
+                    <span>Java</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill java"></div>
+                    </div>
+                </li>
+                <li class="python-skill">
+                    <span>Python</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill python"></div>
+                    </div>
+                </li>
+                <li class="csharp-skill">
+                    <span>C#</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill csharp"></div>
+                    </div>
+                </li>
+                <li class="linux-skill">
+                    <span>Linux</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill linux"></div>
+                    </div>
+                </li>
+                <li class="htmlcss-skill">
+                    <span>HTML & CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill htmlcss"></div>
+                    </div>
+                </li>
+                <li class="sql-skill">
+                    <span>SQL</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill sql"></div>
+                    </div>
+                </li>
+                <li class="javascript-skill">
+                    <span>JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill javascript"></div>
+                    </div>
+                </li>
+                <li class="candcplusplus-skill">
+                    <span>C/C++</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill candcplusplus"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="contact-me" class="contact-me-section">
+            <h2>Contact Me</h2>
+            <div class="contact-icons">
+               <a href="mailto:danielraetiangco@trentu.ca"><img src="img/email.png" alt="Email"></a>
+                <a href="https://www.linkedin.com/in/daniel-rae-t-234543220/"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/Lxberation"><img src="img/github.png" alt="Github"></a>
+            </div>
+            <div class="video-container">
+                <video class="video-player" controls>
+                    <source src="img/earth.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="contact-boxes">
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+            <form action="submit_form.php" method="POST">
+                    <label for="name">Organization:</label>
+            <input type="text" id="name" name="name" placeholder="Your Organization" required><br><br>
+            <label for="reason">Reason for Contact:</label>
+            <select id="reason" name="reason" required>
+                <option value="" disabled selected>Select a reason</option>
+                <option value="job">Job Inquiry</option>
+                <option value="project">Project Collaboration</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <fieldset>
+                <legend>What services are you interested in?</legend>
+                <label><input type="checkbox" name="services[]" value="software-development"> Software Development</label><br>
+                <label><input type="checkbox" name="services[]" value="web-development"> Web Development</label><br>
+                <label><input type="checkbox" name="services[]" value="consulting"> Consultation</label><br>
+                <label><input type="checkbox" name="services[]" value="other"> Other</label><br>
+            </fieldset><br>
+        </div>
+        <a href="#top">
+            <button type="button">Submit</button>
+        </a>
+        </div>
+    </main>
+    <footer>
+        <div id="Footer" class="footer-section">
+            <p>©2024 Daniel Rae Tiangco</p>
+        </div>
+    </footer>
+</body>
+</html>
