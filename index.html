@@ -18,51 +18,45 @@ Description: Personal Online Portfolio
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>Drae</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/index.css">
+        <script src="scripts/index.js" defer></script>
+        <title>Lxberation</title>
+    </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li class="logo"><img src="img/logo.png" alt="Personal Logo" /></li>
-            <li><a href="index.html#home" class="active">Home</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#skills">Skills</a></li>
-            <li><a href="index.html#contact-me">Contacts</a></li>
-        </ul>
-    </nav>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li class="logo"><img src="images/logo.png" alt="Personal Logo" /></li>
+                <li><a href="index.html#" class="active">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact-me">Contacts</a></li>
+            </ul>
+        </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
-        <div id="home" class="home-section">
-            <h2>Home</h2>
-            <div class="home-info">
-                <p>Hi I'm Daniel Rae Tiangco,<br><br>
-                    <span class="home-description">I'm currently pursuing an honours degree in Computer Science, with great interest in both software and infrastructure engineering. This academic path has equipped me with a strong foundation in programming, systems design, and network infrastructure. Alongside my studies, I serve as an executive member of the Trent Durham Computer Science Organization, where I lead initiatives that foster collaboration, skill development, and networking among students in our field. I am actively seeking employment opportunities to apply my knowledge and skills in a practical setting, with a keen interest in roles that will allow me to contribute to innovative projects and further develop my expertise in software and infrastructure engineering.</span>
-                </p>
-                <div class="home-img">
-                    <img 
-                        src="img/me.jpg" 
-                        srcset="img/me.jpg 600w, img/me.jpg 1200w, img/me.jpg 1800w" 
-                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 30vw" 
-                        alt="An image of me">
-                    <div class="audio">
-                        <audio controls>
-                            <source src="/img/introduction.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
+        <!-- Main Content -->
+        <main>
+            <!-- Home Section -->
+            <div id="home" class="home-section">
+                <div id="welcome-message"></div>
+                <div class="home-info">
+                    <p>Hi, I'm Daniel Rae Tiangco,<br><br>
+                        <span class="home-description">
+                            I am currently pursuing an honours degree in Computer Science, with a great interest in back-end and DevOps engineering. This program has provided me with a solid foundation in server-side development, database management, API integration, and the design and maintenance of robust infrastructures. Beyond academics, I serve as the Vice President of the Trent Durham Association for Technology and Advancement, where I lead initiatives that foster collaboration, skill-building, and networking among students in our field. I am actively seeking employment opportunities to apply my knowledge and skills in a practical setting, with a keen interest in roles that will allow me to contribute to innovative projects and further develop my expertise in back-end and DevOps engineering.</span>
+                    </p>
+                    <div class="home-img">
+                        <img 
+                            src="images/Drae.png" alt="An image of me">
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- Projects Section -->
         <div id="projects" class="projects-section">
@@ -70,125 +64,269 @@ Description: Personal Online Portfolio
             <div class="tab-container">
                 <!-- Project: Trent Computer Science Organization -->
                 <div class="tab-tdcso">
-                    <img src="img/TDCSO.jpg" alt="">
+                    <img src="images/DATA.png" alt="">
                     <div class="tab-info">
-                        <h3>Trent Computer Science <br> Organization</h3>
-                        <p>I am one of the founders of the Trent Computer Science Organization, dedicated to fostering collaboration and innovation among students in the field of computer science.</p>
+                        <h3>Trent Durham Association of Technology Advancement <br> (DATA)</h3>
+                        <p>I am one of the founders and the Vice President of the Trent Durham Association of Technology Advancement, an organization committed to promoting collaboration and innovation among computer science students.</p>
                     </div>
                 </div>
-                <!-- Project: CutsByDrae Business Page -->
+                <!-- Project: CutsByDrae Business Card -->
                 <div class="tab-barber">
-                    <img src="img/barber.jpg" alt="">
+                    <img src="images/barber.jpg" alt="">
                     <div class="tab-info">
-                        <h3>CutsByDrae Business Page</h3>
-                        <p>I designed a business website focused on networking, utilizing third-party software to create an engaging and functional platform.</p>
+                        <h3>CutsByDrae Landing Page</h3>
+                        <p>I created a landing page for my barbering business, CutsByDrae, using NFC technology. The digital business card allows me to network by simply tapping it with someone’s phone, instantly directing them to my page for more information.</p>
+                    </div>
+                </div>
+                <!-- Project: CutsByDrae Website -->
+                <div class="tab-blessed">
+                    <img src="images/barberwebsite.jpg" alt="">
+                    <div class="tab-info">
+                        <h3>CutsByDrae Website</h3>
+                        <p>I designed a personal website to showcase my barbering skills, featuring high-quality videos of my work, authentic customer reviews, and a personal bio.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Skills Section -->
-        <div id="skills" class="skills-section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <!-- Skill: Java -->
-                <li class="java-skill">
-                    <span>Java</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill java"></div>
-                    </div>
-                </li>
-                <!-- Skill: Python -->
-                <li class="python-skill">
-                    <span>Python</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill python"></div>
-                    </div>
-                </li>
-                <!-- Skill: C# -->
-                <li class="csharp-skill">
-                    <span>C#</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill csharp"></div>
-                    </div>
-                </li>
-                <!-- Skill: Linux -->
-                <li class="linux-skill">
-                    <span>Linux</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill linux"></div>
-                    </div>
-                </li>
-                <!-- Skill: HTML & CSS -->
-                <li class="htmlcss-skill">
-                    <span>HTML & CSS</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill htmlcss"></div>
-                    </div>
-                </li>
-                <!-- Skill: SQL -->
-                <li class="sql-skill">
-                    <span>SQL</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill sql"></div>
-                    </div>
-                </li>
-                <!-- Skill: JavaScript -->
-                <li class="javascript-skill">
-                    <span>JavaScript</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill javascript"></div>
-                    </div>
-                </li>
-                <!-- Skill: C/C++ -->
-                <li class="candcplusplus-skill">
-                    <span>C/C++</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill candcplusplus"></div>
-                    </div>
-                </li>
-            </ul>
+        <!-- Education Section -->
+        <div id="education" class="education-section">
+            <h2>Education</h2>
+            <div id="educationtable" class="educationtable-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Highlights</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Honours Bachelor of Science in Computer Science</td>
+                            <td>Trent University</td>
+                            <td>Focused on back-end development and DevOps engineering; vice president of the Trent Durham Association for Technology and Advancement, leading initiatives in collaboration and skill-building for students.</td>
+                        </tr>
+                        <tr>
+                            <td>High School Diploma</td>
+                            <td>Monsignor Paul Dwyer Catholic High School</td>
+                            <td>Graduated with honours while serving as the president of the computer science club, showcasing strong leadership, academic excellence, and a commitment to advancing technology and collaboration.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+<!-- Skills Section -->
+<div id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <!-- Skills Grid Section -->
+    <div id="skill-cards" class="skills-cards-section">
+        <!-- Java -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/java.png" alt="Java Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Java</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Python -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/python.png" alt="Python Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Python</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bash -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/bash.png" alt="Bash Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Bash</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- HTML & CSS -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/html.png" alt="HTML & CSS Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>HTML & CSS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SQL -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/sql.png" alt="SQL Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>SQL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/javascript.png" alt="JavaScript Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- C -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/c.png" alt="C Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- C# -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/csharp.png" alt="C# Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>C#</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- C++ -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/c++.png" alt="C++ Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>C++</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Go -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/go.png" alt="Go Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Go</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ruby -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/ruby.png" alt="Ruby Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Ruby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Perl -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/perl.png"Perl Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Perl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Rust -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/rust.png" alt="Rust Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Rust</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PHP -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/php.png" alt="PHP Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>PHP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Kotlin -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/kotlin.png" alt="Kotlin Logo">
+                    </div>
+                    <div class="card-back">
+                        <p>Kotlin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- Contact Me Section -->
         <div id="contact-me" class="contact-me-section">
             <h2>Contact Me</h2>
             <div class="contact-icons">
-                <a href="mailto:danielraetiangco@trentu.ca"><img src="img/email.png" alt="Email"></a>
-                <a href="https://www.linkedin.com/in/daniel-rae-t-234543220/"><img src="img/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://github.com/Lxberation"><img src="img/github.png" alt="Github"></a>
-            </div>
-            <div class="video-container">
-                <video class="video-player" controls>
-                    <source src="img/earth.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="contact-boxes">
-                <form action="submit_form.php" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
-                    
-                    <label for="organization">Organization:</label>
-                    <input type="text" id="organization" name="organization" placeholder="Your Organization" required><br><br>
-
-                    <label for="reason">Reason for Contact:</label>
-                    <select id="reason" name="reason" required>
-                        <option value="" disabled selected>Select a reason</option>
-                        <option value="job">Job Inquiry</option>
-                        <option value="project">Project Collaboration</option>
-                        <option value="other">Other</option>
-                    </select><br><br>
-
-                    <fieldset>
-                        <legend>What services are you interested in?</legend>
-                        <label><input type="checkbox" name="services[]" value="software-development"> Software Development</label><br>
-                        <label><input type="checkbox" name="services[]" value="consultation"> Consultation</label><br>
-                        <label><input type="checkbox" name="services[]" value="training"> Training</label><br>
-                    </fieldset>
-
-                    <input type="submit" value="Submit">
-                </form>
+                <a href="mailto:danielraetiangco@trentu.ca"><img src="images/email.png" alt="Email"></a>
+                <a href="https://www.linkedin.com/in/daniel-rae-t-234543220/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/Lxberation"><img src="images/github.png" alt="Github"></a>
             </div>
         </div>
     </main>
@@ -196,7 +334,7 @@ Description: Personal Online Portfolio
     <!-- Footer -->
     <footer>
         <div id="Footer" class="footer-section">
-            <p>©2024 Daniel Rae Tiangco</p>
+            <p>©2025 Daniel Rae Tiangco</p>
         </div>
     </footer>
 </body>
