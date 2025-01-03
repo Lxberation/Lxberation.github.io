@@ -1,27 +1,33 @@
-/* Global Styles */
+/* Body */
 body {
     width: 100%;
+    min-height: 100vh;
     margin: 0;
-    background: linear-gradient(45deg,#4ddba7,#3e4ea9,#53cbc5,#101ddb);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    padding: 0;
+    background: linear-gradient(45deg, #191970, #341539);
     font-family: "Old Standard TT", serif;
 }
 
-/* Gradient Animation */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
+/* ----------------------------------------------------------- */
+
+/* Navigation Styles */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+
+/* Conditional styling if backdrop filter is supported */
+@supports (backdrop-filter: blur(10px)) {
+    nav {
+        backdrop-filter: blur(10px);
     }
 }
 
-/* Navigation Styles */
+/* Navigation Bar Items */
 nav ul {
     margin: 0;
     padding: 0;
@@ -35,13 +41,13 @@ nav li {
 }
 
 nav li a {
-    color: #ffffff;
+
+    color: white;
     text-decoration: none;
     font-size: 2rem;
     position: relative;
 }
 
-/* Link Hover Effect */
 nav li a:hover::after {
     content: '';
     position: absolute;
@@ -49,32 +55,24 @@ nav li a:hover::after {
     right: 0;
     bottom: -5px;
     height: 2px;
-    background-color: #FAF9F6;
+    background-color: white;
     transition: width 0.3s ease;
     width: 100%;
 }
 
+/* Logo Styling */
 .logo img {
     max-width: 150px;
     max-height: 150px;
 }
 
-nav {
-    border-bottom: 2px solid white;
-}
+/* ----------------------------------------------------------- */
 
 /* Home Section Styles */
 .home-section {
     color: white;
     padding-left: 3rem;
-    padding-top: 0rem;
-}
-
-.home-section h2 {
-    text-align: center;
-    color: white;
-    padding-right: 3rem;
-    font-size: 3rem;
+    padding-top: 5rem;
 }
 
 .home-info {
@@ -103,28 +101,10 @@ nav {
     transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s;
 }
 
-.home-img:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 0 2rem cyan;
-    border-radius: 3em;
-}
+/* ----------------------------------------------------------- */
 
-/* Audio Player Styles */
-.audio {
-    text-align: right;
-    margin-top: 20px;
-}
-
-.audio audio {
-    width: 85%;
-    max-width: 600px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Projects Section Styles */
 .projects-section {
+    padding-top: 5rem;
     margin-bottom: 2rem;
 }
 
@@ -143,8 +123,7 @@ nav {
     width: 25%;
     text-align: center;
     border-radius: 1rem;
-    background-color: #72A9BC;
-    box-shadow: 0 0 0.5rem white;
+    box-shadow: 0 0 0.5rem rgba(185,104,199);
     margin-right: 2rem;
     margin-left: 2rem;
 }
@@ -160,8 +139,16 @@ nav {
     width: 25%;
     text-align: center;
     border-radius: 1rem;
-    background-color: #72A9BC;
-    box-shadow: 0 0 0.5rem white;
+    box-shadow: 0 0 0.5rem rgba(185,104,199);
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.tab-blessed {
+    width: 25%;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgba(185,104,199);
     margin-right: 2rem;
     margin-left: 2rem;
 }
@@ -169,6 +156,20 @@ nav {
 .tab-barber img {
     width: 11rem;
     height: 15rem;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+}
+
+.tab-barber img {
+    width: 11rem;
+    height: 15rem;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+}
+
+.tab-blessed img {
+    width: 20rem;
+    height: 12rem;
     margin-top: 1rem;
     border-radius: 0.8rem;
 }
@@ -184,99 +185,146 @@ nav {
     line-height: 1.5;
 }
 
-.tab-tdcso:hover {
-    transform: scale(1.1);
+/* ----------------------------------------------------------- */
+
+/* Education Section Styles */
+.education-section {
+    padding-top: 5rem;
 }
 
-.tab-barber:hover {
-    transform: scale(1.1);
-}
-
-/* Skills Section Styles */
-.skills-section h2 {
+.education-section h2 {
     color: white;
     font-size: 3rem;
     text-align: center;
 }
 
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    list-style-type: none;
-    padding: 0;
-    color: white;
-    font-size: 1.5rem;
-}
-
-.skill-bar {
-    position: relative;
-    height: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 1rem;
-    overflow: hidden;
-    margin-top: 0.5rem;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.skill-fill {
-    position: absolute;
-    height: 100%;
-    width: 0;
-    transition: width 0.5s ease;
-    background-color: white;
-}
-
-.java {
-    width: 95%;
-}
-
-.python {
-    width: 95%;
-}
-
-.csharp {
-    width: 95%;
-}
-
-.linux {
-    width: 85%;
-}
-
-.htmlcss {
+/* Education Table Styling */
+.educationtable-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 0.5rem rgba(185,104,199);
 }
 
-.sql {
-    width: 75%;
+.educationtable-section tbody tr:hover {
+    background-color: #191970;
 }
 
-.javascript {
-    width: 60%;
-}
-
-.candcplusplus {
-    width: 60%;
-}
-
-.skills-section {
-    margin-bottom: 2rem;
-}
-
-.skills-list li {
+.educationtable-section table {
+    border-collapse: collapse;
+    font-size: 1.5rem;
     color: white;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
-.skills-list li span {
-    display: block;
+.educationtable-section th, 
+.educationtable-section td {
+    padding: 1.5rem;
     text-align: center;
 }
 
+.educationtable-section thead tr {
+    color: white;
+}
+
+.educationtable-section:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------------------------- */
+
+/* Style for the Skills Section Header */
+
+.skills-section {
+    padding-top: 5rem;
+}
+
+.skills-section h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Spacing between header and grid */
+    color: white;
+    font-size: 3rem;
+}
+
+/* Grid layout for the skill cards */
+.skills-cards-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Adjust spacing between cards */
+    justify-items: center; /* Center-align cards horizontally */
+    align-items: center; /* Center-align cards vertically */
+    padding: 20px;
+}
+
+/* Container for each card */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling */
+.card {
+    width: 200px;
+    height: 200px; /* Adjusted height to make the card more balanced */
+    perspective: 1000px;
+}
+
+/* Card inner container for 3D effect */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+/* Hover effect for flipping the card */
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back of the card */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style for the front of the card */
+.card-front {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 0 0.5rem rgba(185, 104, 199, 0.8);
+    transform: rotateY(0deg);
+}
+
+/* Style for the back of the card */
+.card-back {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 0 0.5rem rgba(185, 104, 199, 0.8);
+    transform: rotateY(180deg);
+}
+
+  
+  
+
+/* ----------------------------------------------------------- */
+
 /* Contact Section Styles */
 .contact-me-section {
+    padding-top: 5rem;
     text-align: center;
 }
 
@@ -298,26 +346,7 @@ nav {
     padding-right: 5rem;
 }
 
-.contact-boxes {
-    color: white;
-    font-size: 1.25rem;
-}
-
-fieldset {
-    border: none;
-}
-
-.video-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.video-player {
-    width: 35%;
-    max-width: 50rem;
-    height: auto;
-    margin-bottom: 2rem;
-}
+/* ----------------------------------------------------------- */
 
 /* Footer Section Styles */
 .footer-section p {
@@ -325,77 +354,4 @@ fieldset {
     font-size: 1.25rem;
     text-align: center;
     margin-top: 3rem;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    body {
-        /* Adjusts font size for smaller screens */
-        font-size: 14px;
-    }
-
-    /* Adjustments for logos, audio player, images, tabs, contact icons, and video player for mobile view */
-    .logo img {
-        max-width: 90px;
-        max-height: 90px;
-    }
-
-    .audio {
-        text-align: right;
-        margin-top: 20px;
-    }
-    
-    .audio audio {
-        width: 90%;
-        max-width: 600px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-    
-    .home-img {
-        margin-right: 3.5rem;
-    }
-    
-    .home-img img {
-        max-width: 20rem;
-        max-height: 20rem;
-        border-radius: 2rem;
-        margin-left: 0rem;
-        transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s;
-    }
-    
-    .home-img:hover img {
-        transform: scale(1.05);
-        box-shadow: 0 0 2rem cyan;
-        border-radius: 3em;
-    }
-
-    .tab-tdcso img {
-        width: 7rem;
-        height: 6rem;
-        margin-top: 1rem;
-        border-radius: 0.8rem;
-    }
-    
-    .tab-barber img {
-        width: 7rem;
-        height: 8rem;
-        margin-top: 1rem;
-        border-radius: 0.8rem;
-    }
-
-    .contact-icons img {
-        max-width: 6rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    
-    .video-player {
-        width: 80%;
-        max-width: 50rem;
-        height: auto;
-        margin-bottom: 2rem;
-    }
-
 }
